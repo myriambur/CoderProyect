@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
+
+.navbar-brand>img{
+    width:180px;
+}
+
+nav.navbar ul.nav li {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navegador {
+    background-color: #079b58;
+    padding: 20px;
+    font-family: 'Solway', serif;
+}
+
+.navegador>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+}
+
+.navegador>ul>li>a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.navegador>ul>li>ul {
+    display: none;
+}
+
+.encabezadoitems {
+    background-image: url(../img2/healthy-1607692__480.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.encabezado {
+    background-image: url(../img2/healthy-1607692__480.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.encabezado-info h1 {
+    color: white;
+    font-size: 50px;
+    margin-top: 100px;
+    font-family: 'Solway', serif;
+}
+
+.claseForm{
+    max-width: 800px;
+    background-color: #36b27a;
+    color: white;
+    box-shadow: 0 0 20px 0 #36b27a;
+    border-radius: 1em;
+    padding: 30px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 60px ;
+    grid-template-areas: "zona1 zona1"
+                         "zona2 zona3"
+                         "zona4 zona5"
+                         "zona6 zona6"
+                         "zona7 zona7";
+
+}
+.claseForm h2:nth-child(1){
+    grid-area: zona1;
+}
+.claseForm label:nth-child(2){
+    grid-area: zona2;
+}
+.claseForm label:nth-child(3){
+    grid-area: zona3;
+}
+.claseForm label:nth-child(4){
+    grid-area: zona4;
+}
+.claseForm label:nth-child(5){
+    grid-area: zona5;
+}
+.claseForm label:nth-child(6){
+    grid-area: zona6;
+}
+.claseForm button:nth-child(7){
+    grid-area: zona7;
+    background-color: white ;
+    color: #36b27a;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: Solway;
+    font-size: 100%;
+}
+
+.claseForm label {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.claseForm input,.claseForm textarea {
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    color:white;
+    font-family: inherit;
+
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    box-shadow:0 0 0 30px rgb(34, 34,34) inset !important;
+    -webkit-text-fill-color: white;
+}
+
+@media(max-width:576px){
+    .claseForm{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px ;
+        grid-template-areas: "zona1"
+                             "zona2"
+                             "zona3"
+                             "zona4"
+                             "zona5"
+                             "zona6"
+                             "zona7"
+                             ;
+    
+    }
+    .pie-pagina .grupo-foot{
+       width: 100%;
+       padding: 35px 0px;
+    }
+}
+
+.claseInput {
+    font-family: inherit;
+    width: 100%;
+    margin: 6px;
+    padding: 5px;
+}
+
+.formEnviar {
+    font-family: inherit;
+    width: 50%;
+    margin: 6px;
+    padding: 6px;
+}
+
+.buscador {
+    font-family: 'Solway', serif;
+    display: flex;
+    width: 30vw;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.subtitulo {
+    font-family: 'Solway', serif;
+    display: flex;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.contenedor {
+    display: flex;
+    font-family: 'Solway', serif;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.contenedor p {
+    box-shadow: 4px 4px 4px 2px black;
+    padding: 5px;
+}
+
+.titulo {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    margin-top: 20px;
+    font-family: 'Solway', serif;
+    display: block;
+    text-align: center;
+}
+
+.otrotitulo {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin: 20px 0px 30px 0px;
+    font-family: 'Solway', serif;
+    display: block;
+    text-align: center;
+}
+
+.bnt {
+    margin-top: 10px;
+    padding: 5px 25px;
+    background-color: red;
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    margin: 10px;
+}
+
+.tarjetas {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.tarjetas>div {
+    width: 50%;
+    padding: 10px;
+    background: #fff;
+}
+
+.tarjetas>div:first-child {
+    margin-right: 20px;
+}
+
+.medicos {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.medicos>div {
+    background: #fff;
+}
+
+.medico>img {
+    width: 80%;
+    height: 80%;
+}
+
+.medicos>div:first-child {
+    margin-right: 20px;
+}
+
+.cabecerawrap {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.wrap {
+    /*  width: 100vw;
+    height: 100vh;*/
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(../img/superalimentos1-768x433.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 40%;
+}
+
+.wrapother {
+    /*  width: 100vw;
+      height: 100vh;*/
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(../img/testim.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 40%;
+}
+
+.wrap-texto {
+    color: #fff;
+    text-align: center;
+    width: 20%;
+    padding: 10px;
+}
+
+.wrap-texto>h1 {
+    margin: auto;
+}
+
+.wrap-texto>p {
+    float: left;
+    font-weight: bold;
+}
+
+.micuenta {
+    float:right;
+    margin:15px;
+    font-weight: bold;
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color: #36b27a;
+}
+
+/*.pie-pagina .grupo-1{
+width: 100%;
+max-width: 1200px;
+margin:auto;
+display:grid;
+grid-template-rows: 1fr;
+grid-gap:50px;
+padding: 45px 0px;
+}*/
+
+.pie-pagina .grupo-foot{
+    background-color: #fff;
+    color: #36b27a;
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.pie-pagina .grupo-foot small{
+    font-size: 15px;
+}
+
+/* .container-fluid {
+    height: 90%;
+    width: 100%;
+  }
+  
+  .carousel-inner img {
+    height: 250px;
+  }  */
+  
+  .carousel-item {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      height: 500px;
+      margin: auto;
+  }
+  .carousel-control {
+      width: 10%;
+  }
+
+
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: green;
+    border-radius: 50px;
+  }
+
+  .tituloContacto a{
+    color: #079b58;
+  }  
+
