@@ -1,0 +1,50 @@
+.bodyConAside {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 300px 1fr 100px;
+    grid-template-areas: "nav    nav    nav    nav"
+        "main   main   main   main"
+        "footer footer footer footer";
+
+    @media(max-width:576px) {
+        grid-template-rows: 70px 200px auto auto 100px;
+        grid-template-areas: "nav    nav    nav    nav"
+            "main   main   main   main"
+            "footer footer footer footer";
+    }
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin-block-start: 40px;
+    .tarjeta{
+        width: 350px;
+        margin: 10px;
+        margin-block-end: 20px;
+        gap: 20px;
+        font-family: Quicksand-Light;
+        color:$colorVerde;
+        border: solid 2px;
+        overflow: hidden;
+        padding: 10px;
+
+        img{
+            width: 100%;
+        }
+        &-info{
+            margin: 20px;
+            background-color:white;
+            width: 200px;
+            display: block;
+
+            .btn{
+                @extend %btngenerico;
+                width: 100px;
+            }
+        }
+    }
+}

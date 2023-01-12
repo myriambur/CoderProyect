@@ -9,6 +9,10 @@
   padding-top: 70px;
 }
 
+main {
+  grid-area: main;
+}
+
 html,
 body {
   font-family: "Solway", serif;

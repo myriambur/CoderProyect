@@ -13,3 +13,14 @@
         justify-content: center;
         align-content: center;
 }
+
+%btngenerico{
+        display: block;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        background-color: $colorVerde;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+}

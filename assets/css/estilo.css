@@ -9,6 +9,10 @@
   padding-top: 70px;
 }
 
+main {
+  grid-area: main;
+}
+
 .claseForm input,
 .claseForm textarea {
   background-color: transparent;
@@ -24,6 +28,17 @@
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.containercards .containercard .btn, .tarjetas .tarjeta-info .btn {
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #36b27a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
 .claseForm {
@@ -127,6 +142,12 @@ body {
   object-fit: cover;
 }
 
+.container {
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
 .navcontacto {
   grid-area: nav;
   display: flex;
@@ -155,25 +176,6 @@ body {
   color: #36b27a;
 }
 
-/*nav .menu > ul{
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-nav .menu{
-    display: flex;
-}
-nav .menu > ul > li{
-    border-right: 1px solid;
-}
-nav .menu > ul > li > a{
-    padding: 4px 10px;
-    display: block;
-
-}
-nav .menu > ul:nth-child(2) > li:nth-child(2){
-    border: 0;
-}*/
 main {
   grid-area: main;
   display: flex;
@@ -226,6 +228,72 @@ footer {
     align-items: center;
   }
 }
+.bodyConAside {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 300px 1fr 100px;
+  grid-template-areas: "nav    nav    nav    nav" "main   main   main   main" "footer footer footer footer";
+}
+@media (max-width: 576px) {
+  .bodyConAside {
+    grid-template-rows: 70px 200px auto auto 100px;
+    grid-template-areas: "nav    nav    nav    nav" "main   main   main   main" "footer footer footer footer";
+  }
+}
+
+.tarjetas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-block-start: 40px;
+}
+.tarjetas .tarjeta {
+  width: 350px;
+  margin: 10px;
+  margin-block-end: 20px;
+  gap: 20px;
+  font-family: Quicksand-Light;
+  color: #36b27a;
+  border: solid 2px;
+  overflow: hidden;
+  padding: 10px;
+}
+.tarjetas .tarjeta img {
+  width: 100%;
+}
+.tarjetas .tarjeta-info {
+  margin: 20px;
+  background-color: white;
+  width: 200px;
+  display: block;
+}
+.tarjetas .tarjeta-info .btn {
+  width: 100px;
+}
+
+.containercards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 10px;
+}
+.containercards .containercard {
+  display: flex;
+  width: 350px;
+  flex: 25%;
+  gap: 10px;
+  margin: 10px;
+}
+.containercards .containercard img {
+  width: 120px;
+}
+.containercards .containercard .btn {
+  width: 80px;
+}
+
 .navbar-brand > img {
   width: 180px;
 }
@@ -274,13 +342,6 @@ nav.navbar ul.nav li {
   width: 30vw;
   margin: 20px;
   font-size: 18px;
-}
-
-.subtitulo {
-  font-family: "Solway", serif;
-  display: flex;
-  margin: 10px;
-  text-decoration: underline;
 }
 
 .contenedor {
@@ -420,7 +481,6 @@ nav.navbar ul.nav li {
 
 .pie-pagina {
   width: 100%;
-  background-color: #36b27a;
 }
 
 .pie-pagina .grupo-foot {

@@ -5,8 +5,8 @@
 @import "formulario";
 @import "encabezado";
 @import "navcontacto";
-
-
+@import "tarjetas";
+@import "containercards";
 
 @import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
 
@@ -58,13 +58,6 @@ nav.navbar ul.nav li {
     width: 30vw;
     margin: 20px;
     font-size: 18px;
-}
-
-.subtitulo {
-    font-family: 'Solway', serif;
-    display: flex;
-    margin: 10px;
-    text-decoration: underline;
 }
 
 .contenedor {
@@ -204,7 +197,6 @@ nav.navbar ul.nav li {
 
 .pie-pagina{
     width: 100%;
-    background-color: $colorVerde;
 }
 
 .pie-pagina .grupo-foot{
