@@ -1,0 +1,15 @@
+%init {
+        background-color: transparent;
+        outline: none;
+        border: 0;
+        border-bottom: 1px solid white;
+        margin-top: 10px;
+        color: white;
+        font-family: inherit;
+}
+
+%displayFlex {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+}

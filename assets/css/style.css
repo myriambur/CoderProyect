@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Solway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  padding-top: 70px;
+}
+
+html,
+body {
+  font-family: "Solway", serif;
+}
+
+h1 {
+  font: 2.5 rem;
+}
+
+h2 {
+  font: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h4 {
+  font: 1.5 rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.7em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
+.large {
+  font-size: 18px;
+}
+
+.display-1 {
+  font-size: 6rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 23px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+.btn-dark {
+  background: #36b27a;
+  color: white;
+  border: 1px solid #36b27a;
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+form .form-group {
+  margin-bottom: 16px;
+}
+form .form-group-control {
+  width: 100%;
+  padding: 7px 12px;
+  font-size: 1rem;
+  line-height: 1.5px;
+  background: #D8F5EA;
+  border: none;
+  border-radius: 4px;
+}
+form button {
+  width: 100%;
+}
+
+#navbar {
+  height: 12vh;
+  background: #36b27a;
+  color: white;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#navbar a {
+  color: white;
+}
+#navbar .logo {
+  float: left;
+  padding-top: 16px;
+  font-size: 25px;
+}
+#navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-content: center;
+}
+#navbar ul li {
+  padding: 10px;
+}
+
+#showcase {
+  height: 88vh;
+  padding: 120px 0;
+  background: url("/assets/img2/healthy-1607692__480.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  color: white;
+}
+#showcase h1 {
+  width: 50%;
+}
+#showcase p {
+  width: 50%;
+  padding: 15px 0;
+}
+
+#about {
+  padding: 100px 0;
+}
+#about h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+#about img {
+  width: 100%;
+}
+#about .about-flex {
+  display: flex;
+}
+#about .about-flex-image {
+  flex: 1;
+}
+#about .about-flex-descrip {
+  flex: 1;
+  padding: 20px 40px;
+}
+
+#services {
+  padding: 100px 0;
+}
+#services h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+#services p.large {
+  text-align: center;
+  padding-bottom: 50px;
+}
+#services .services-flex {
+  display: flex;
+  gap: 10px;
+}
+#services .services-flex img {
+  height: 40px;
+}
+#services .services-flex-box {
+  background: white;
+  padding: 50px 20 px;
+  text-align: center;
+  border-radius: 20px;
+}
+#services .services-flex-box h4 {
+  padding: 10px 0;
+}
+
+#contact {
+  padding: 100px 0;
+}
+#contact h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+#contact p.large {
+  text-align: center;
+  padding-bottom: 50px;
+}
+#contact form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#mainfooter {
+  background: blue;
+  text-align: center;
+  padding: 30px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,90 @@
+.claseForm {
+    max-width: 800px;
+    background-color: $colorVerde;
+    opacity: 0.83;
+    color: white;
+    box-shadow: 0 0 20px 0 $colorVerde;
+    border-radius: 1em;
+    padding: 30px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas: "zona1 zona1"
+        "zona2 zona3"
+        "zona4 zona5"
+        "zona6 zona6"
+        "zona7 zona7";
+
+    @media(max-width:576px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+        grid-template-areas: "zona1"
+            "zona2"
+            "zona3"
+            "zona4"
+            "zona5"
+            "zona6"
+            "zona7"
+        ;
+
+
+        .pie-pagina .grupo-foot {
+            width: 100%;
+            padding: 35px 0px;
+        }
+    }
+
+    @for $var from 1 to 8 {
+        @if($var==1) {
+            h2:nth-child(#{$var}) {
+                grid-area: zona#{$var};
+            }
+        }
+
+        @else if($var==7) {
+            button:nth-child(#{$var}) {
+                grid-area: zona#{$var};
+                @include boton(auto, white, $colorVerde);
+            }
+        }
+
+        @else {
+            label:nth-child(#{$var}) {
+                grid-area: zona#{$var};
+            }
+        }
+    }
+
+
+    label {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    input,
+    textarea {
+        @extend %init;
+    }
+
+}
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 30px rgb(34, 34, 34) inset !important;
+    -webkit-text-fill-color: white;
+}
+
+
+
+.claseInput {
+    font-family: inherit;
+    width: 100%;
+    margin: 6px;
+    padding: 5px;
+}

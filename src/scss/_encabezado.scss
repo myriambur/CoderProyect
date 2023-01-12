@@ -1,0 +1,16 @@
+.encabezado {
+    background: $colorVerde;
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+    opacity: 0.83;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    grid-area: header;
+    align-items: center;
+    @extend %displayFlex;
+
+    &-info {
+        color: white;
+    }
+}

@@ -1,0 +1,10 @@
+@mixin boton($width, $backcolor,$color) {
+    width: $width;
+    background-color: $backcolor;
+    color: $color;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: Solway;
+    font-size: 100%;
+}
