@@ -34,8 +34,9 @@ body {
             display: flex;
             justify-content: space-evenly;
             list-style-type: none;
+
             &:nth-child(2) {
-                border: 0;
+                border: 100;
             }
 
             li {
@@ -48,6 +49,11 @@ body {
                 }
 
             }
+
+        }
+
+     @media (max-width: 576px) {
+            font-size: 90%;
         }
     }
 }

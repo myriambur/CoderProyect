@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Solway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +33,7 @@ main {
   align-content: center;
 }
 
-.containercards .containercard .btn, .tarjetas .tarjeta-info .btn {
+.tarjetas .tarjeta-info .btn {
   display: block;
   padding: 10px;
   border-radius: 8px;
@@ -129,6 +132,12 @@ input:-webkit-autofill:focus {
   color: white;
 }
 
+.navcontacto .logo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
 body {
   display: grid;
   grid-template-columns: repeat(4, fr);
@@ -165,7 +174,7 @@ body {
   list-style-type: none;
 }
 .navcontacto .menu ul:nth-child(2) {
-  border: 0;
+  border: 100;
 }
 .navcontacto .menu ul li {
   border-right: 1px solid;
@@ -174,6 +183,11 @@ body {
   padding: 4px 10px;
   display: block;
   color: #36b27a;
+}
+@media (max-width: 576px) {
+  .navcontacto .menu {
+    font-size: 90%;
+  }
 }
 
 main {
@@ -273,27 +287,136 @@ footer {
   width: 100px;
 }
 
-.containercards {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  gap: 10px;
-  margin: 10px;
-}
-.containercards .containercard {
-  display: flex;
-  width: 350px;
-  flex: 25%;
-  gap: 10px;
-  margin: 10px;
-}
-.containercards .containercard img {
-  width: 120px;
-}
-.containercards .containercard .btn {
-  width: 80px;
+body {
+  font-family: "Open Sans", sans-serif;
+  background: -webkit-linear-gradient(to left, #DDEFBB, #FFEEEE);
+  background: linear-gradient(to left, #DDEFBB, #FFEEEE);
 }
 
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cards .card {
+  width: 300px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+.cards .card:hover {
+  box-shadow: 3.9px 7.8px 7.8px hsla(0deg, 0%, 0%, 0.38);
+}
+.cards .card .card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.cards .card .card-body h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.cards .card .card-body p {
+  text-align: justify;
+}
+.cards .card .card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .card .card-footer button {
+  width: 150px;
+  background-color: #36b27a;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid white;
+  padding: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+.cards .card .card-footer button:hover {
+  background-color: white;
+  color: #36b27a;
+  border: 2px solid #36b27a;
+}
+
+@media (max-width: 576px) {
+  .navegador > ul {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 70px;
+    background-color: #0a1266;
+    width: 250px;
+    height: 100vh;
+    transition: 0.2s;
+  }
+  .navegador .fa-bars:hover + ul {
+    left: 0;
+  }
+  .navegador ul:hover {
+    left: 0;
+  }
+}
+footer {
+  background-color: black;
+  color: white;
+}
+footer .copyright {
+  padding: 15px 0;
+  text-align: center;
+  border-top: 1px solid gray;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: -webkit-linear-gradient(to left, #DDEFBB, #FFEEEE);
+  background: linear-gradient(to left, #DDEFBB, #FFEEEE);
+}
+
+.cardsnosotros {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cardsnosotros .cardpresentacion {
+  width: 500px;
+  margin: 10px;
+  background-color: white;
+  transition: 0.2s;
+}
+.cardsnosotros .cardpresentacion:hover {
+  box-shadow: 3.9px 7.8px 7.8px hsla(0deg, 0%, 0%, 0.38);
+}
+.cardsnosotros .cardpresentacion .card-imagepresentacion img {
+  width: 100%;
+  height: 100%;
+}
+.cardsnosotros .cardpresentacion .card-bodypresentacion h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.cardsnosotros .cardpresentacion .card-bodypresentacion p {
+  width: 500px;
+  text-align: start;
+  padding: 10px;
+}
+
+@media (max-width: 576px) {
+  .cardsnosotros .cardpresentacion .card-imagepresentacion .card-bodypresentacion {
+    display: inline-block;
+    width: 200px;
+  }
+}
 .navbar-brand > img {
   width: 180px;
 }
@@ -518,4 +641,235 @@ nav.navbar ul.nav li {
 
 .tituloContacto a {
   color: #079b58;
-}/*# sourceMappingURL=estilo.css.map */
+}
+
+.body {
+  padding-top: 70px;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer .copyright {
+  padding: 15px 0;
+  text-align: center;
+  border-top: 1px solid gray;
+}
+
+html,
+body {
+  font-family: "Solway", serif;
+}
+
+h1 {
+  font: 2.5 rem;
+}
+
+h2 {
+  font: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h4 {
+  font: 1.5 rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.7em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
+.large {
+  font-size: 18px;
+}
+
+.display-1 {
+  font-size: 6rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 23px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.btn-dark {
+  background: #36b27a;
+  color: white;
+  border: 1px solid #36b27a;
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+form .form-group {
+  margin-bottom: 16px;
+}
+
+form .form-group-control {
+  width: 100%;
+  padding: 7px 12px;
+  font-size: 1rem;
+  line-height: 1.5px;
+  background: #D8F5EA;
+  border: none;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+}
+
+#navbar {
+  height: 12vh;
+  background: #36b27a;
+  color: white;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#navbar a {
+  color: white;
+}
+
+#navbar .logo {
+  float: left;
+  padding-top: 16px;
+  font-size: 25px;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-content: center;
+}
+
+#navbar ul li {
+  padding: 10px;
+}
+
+#showcase {
+  height: 88vh;
+  padding: 120px 0;
+  background: url("/assets/img2/healthy-1607692__480.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  color: white;
+}
+
+#showcase h1 {
+  width: 50%;
+}
+
+#showcase p {
+  width: 50%;
+  padding: 15px 0;
+}
+
+#about {
+  padding: 100px 0;
+}
+
+#about h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#about img {
+  width: 100%;
+}
+
+#about .about-flex {
+  display: flex;
+}
+
+#about .about-flex-image {
+  flex: 1;
+}
+
+#about .about-flex-descrip {
+  flex: 1;
+  padding: 20px 40px;
+}
+
+#services {
+  padding: 100px 0;
+}
+
+#services h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#services p.large {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#services .services-flex {
+  display: flex;
+  gap: 10px;
+}
+
+#services .services-flex img {
+  height: 40px;
+}
+
+#services .services-flex-box {
+  background: white;
+  padding: 50px 20 px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#services .services-flex-box h4 {
+  padding: 10px 0;
+}
+
+#contact {
+  padding: 100px 0;
+}
+
+#contact h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#contact p.large {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#contact form {
+  width: 50%;
+  margin: 0 auto;
+} /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=estilo.css.map */

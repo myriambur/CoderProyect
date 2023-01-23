@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: -webkit-linear-gradient(to left, #DDEFBB, #FFEEEE);
+    background: linear-gradient(to left, #DDEFBB, #FFEEEE);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card {
+        width: 300px;
+        margin: 10px;
+        background-color: white;
+        border-radius: 15px;
+        transition: 0.2s;
+        &:hover{
+            box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0%/0.38);
+        }
+        .card-image {
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px 10px 0px 0px;
+            }
+        }
+
+        .card-body {
+            h2 {
+                text-align: center;
+                margin-bottom: 10px;
+                padding: 5px;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                width: 150px;
+                background-color: $colorVerde;
+                color: white;
+                border-radius: 15px;
+                border: 2px solid white;
+                padding: 6px;
+                font-size: 17px;
+                cursor: pointer;
+                margin-bottom: 10px;
+                transition: 0.2s;
+                &:hover{
+                    background-color: white;
+                    color:$colorVerde;
+                    border:2px solid $colorVerde;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:576px){
+
+    .navegador > ul{
+        position: fixed;
+        top: 0;
+        left: -300px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 70px;
+        background-color: #0a1266;
+        width: 250px;
+        height: 100vh;
+        transition: 0.2s;
+    }
+    .navegador .fa-bars:hover + ul {
+       left: 0;
+    }
+    
+    .navegador ul:hover{
+        left: 0;
+    }
+
+}
